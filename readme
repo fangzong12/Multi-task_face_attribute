@@ -1,0 +1,15 @@
+1.把要打包的文件放入一个文件夹face_cls里面
+2.在文件夹里面新建空的__init__.py
+3.在运行脚本的文件目录下面新建setup.py，并编写内容：
+ #!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# python setup.py bdist_egg
+
+from setuptools import setup, find_packages
+
+setup(
+    name="face_cls",
+    version="1.1",
+    packages=find_packages(),
+)
+4.python setup.py bdist_egg
